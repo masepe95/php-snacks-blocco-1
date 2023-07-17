@@ -30,6 +30,20 @@ if (!is_numeric($age)) {
 </head>
 
 <body>
+    <?php if (empty($errors)) : ?>
+
+        <h1>Access granted</h1>
+
+    <?php else : ?>
+
+        <h1>Unauthorized</h1>
+        <ul>
+            <?php foreach ($errors as $key => $value) : ?>
+                <li><strong><?= $key ?>: </strong><?= $value ?></li>
+            <?php endforeach; ?>
+        </ul>
+
+    <?php endif; ?>
 </body>
 
 </html>
