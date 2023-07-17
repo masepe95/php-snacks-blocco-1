@@ -27,6 +27,7 @@
                 <!-- age -->
                 <label for="age">Age: </label>
                 <input type="text" name="age" id="age">
+                <button>Verify</button>
             </form>
         </section>
     </main>
