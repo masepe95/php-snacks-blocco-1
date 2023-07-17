@@ -4,9 +4,19 @@ $name = $_GET['name'] ?? '';
 $email = $_GET['email'] ?? '';
 $age = $_GET['age'] ?? '';
 
-echo $name;
-echo $email;
-echo $age;
+$errors = [];
+
+if (strlen($name) <= 3) {
+    $errors['name'] = 'Name must be at least 3 characters long';
+}
+
+if (!str_contains($email, '@') || !str_contains($email, '.')) {
+    $errors['email'] = 'Email must contain both \'@\' and \'.\'';
+}
+
+if (!is_numeric($age)) {
+    $errors['age'] = 'Age must be a valid number';
+}
 
 ?>
 
