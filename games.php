@@ -3,34 +3,34 @@
 $matches = [
     [
         'home' => [
-            'name' => 'JuveCaserta',
+            'team' => 'JuveCaserta',
             'points' => 83
         ],
         'guest' => [
 
-            'name' => 'Olimpia Milano',
+            'team' => 'Olimpia Milano',
             'points' => 71
         ]
     ],
     [
         'home' => [
-            'name' => 'Poggibonsi',
+            'team' => 'Poggibonsi',
             'points' => 59
         ],
         'guest' => [
 
-            'name' => 'Cantù',
+            'team' => 'Cantù',
             'points' => 61
         ]
     ],
     [
         'home' => [
-            'name' => 'Longobarda',
+            'team' => 'Longobarda',
             'points' => 42
         ],
         'guest' => [
 
-            'name' => 'OronzoCanà',
+            'team' => 'OronzoCanà',
             'points' => 90
         ]
     ],
@@ -50,11 +50,12 @@ $matches = [
 
     <main>
         <h1>Matches list:</h1>
-        <ul></ul>
-        <?php foreach ($matches as $match) : ?>
-
-        <?php endforeach ?>
-
+        <ul>
+            <?php foreach ($matches as $match) : ?>
+                <li>
+                    <?= $match['home']['team'] ?> - <?= $match['guest']['team'] ?> | <?= $match['home']['points'] ?>-<?= $match['guest']['points'] ?>
+                </li>
+            <?php endforeach ?>
         </ul>
     </main>
 
