@@ -10,7 +10,24 @@
 <body>
     <main>
         <section id="basket">
-            <a href="basket.php">Check basket games</a>
+            <h2>Basket games</h2>
+            <a href="games.php">Check basket games</a>
+        </section>
+
+        <!-- VERIFY FORM -->
+        <section id="verify-form">
+            <h2>Verify:</h2>
+            <form action="verify.php" method="get" novalidate>
+                <!-- name -->
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name">
+                <!-- mail -->
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email">
+                <!-- age -->
+                <label for="age">Age: </label>
+                <input type="text" name="age" id="age">
+            </form>
         </section>
     </main>
 </body>
